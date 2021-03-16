@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Collections of browser game written using TypeScript and CSS Grid layouts" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/style/main.scss" />
+    <title>Mars' Box of Games</title>
+  </head>
+  <body>
+    <main class="container">
+      <!-- header logo -->
+      <header class="logo">
+        <img src="./assets/img/logo.svg" width="64" height="64" alt="Logo" class="logo__image" />
+        <div class="logo__wordmark">
+          <h1 class="logo__title">MARS&apos;</h1>
+          <h2 class="logo__subtitle">Box of Games</h2>
+        </div>
+      </header>
+      <!-- game selections -->
+      <section class="section">
+        <ul class="selection">
+          <li class="selection__item">
+            <a href="#" class="selection__card">
+              <span class="selection__title">Coin Hunt</span>
+            </a>
+          </li>
+          <li class="selection__item">
+            <div class="selection__card selection__card--disabled">
+              <span class="selection__title">More<br />Coming Soon</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <p class="footer__text">
+        Mars Santoso &lt;<a href="mailto:marssantoso@hotmail.com">marssantoso@hotmail.com</a>&gt;
+      </p>
+    </footer>
+    <script src="./index.ts"></script>
+  </body>
+</html>

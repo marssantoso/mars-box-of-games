@@ -1,0 +1,116 @@
+@import 'mixins';
+@import 'variables';
+
+.container {
+  width: calc(100% - 2rem);
+  margin: 0 auto;
+  padding: 1rem;
+  @include screen-md {
+    width: 720px;
+  }
+  @include screen-lg {
+    width: 1140px;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  &__wordmark {
+    font-family: 'Lato';
+    * {
+      margin: unset;
+    }
+  }
+  &__image {
+    margin-right: 8px;
+  }
+  &__title {
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 0.8;
+    letter-spacing: 3.3px;
+    color: $neutral-6;
+  }
+  &__subtitle {
+    font-size: 26px;
+    font-weight: 400;
+    color: $neutral-5;
+  }
+}
+
+.selection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: unset;
+  @include screen-md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include screen-lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &__item {
+    position: relative;
+    padding-bottom: 100%;
+    list-style: none;
+  }
+  &__card {
+    position: absolute;
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
+    text-decoration: none;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    border: 1px solid $neutral-3;
+    background-color: $neutral-2;
+    color: $neutral-6;
+    &--disabled {
+      background-color: unset;
+      color: $neutral-5;
+    }
+  }
+}
+
+.section {
+  text-align: center;
+  margin-top: 2rem;
+  color: $neutral-6;
+  &__title {
+    margin-top: unset;
+    margin-bottom: 1rem;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0 1rem;
+  width: calc(100% - 2rem);
+  height: 40px;
+  background-color: $neutral-2;
+  &__text {
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin: unset;
+    color: $neutral-6;
+  }
+}
+
+.link {
+  color: $blue-3;
+  text-decoration: none;
+}
