@@ -1,0 +1,128 @@
+@import '../../assets/style/variables';
+
+// LOCAL MIXINS
+
+@mixin getBackground($name) {
+  &[data-path='#{$name}'] {
+    background-image: url('./img/#{$name}.svg');
+  }
+}
+
+@mixin rotateCharacter($direction, $rotation) {
+  &--#{$direction}::before {
+    transform: rotate(#{$rotation}deg);
+  }
+}
+
+// GLOBAL OVERRIDES
+
+.section {
+  > * {
+    max-width: 500px;
+  }
+}
+
+// MAIN ELEMENTS
+
+#header {
+  width: 500px;
+  height: 100px;
+  display: grid;
+  grid-template: 1fr / 1fr 3fr 1fr;
+  margin: 0 auto;
+  #scoreBoard {
+    order: 1;
+    padding: 0 1rem;
+    font-size: 1.25rem;
+    > * {
+      display: block;
+    }
+  }
+  #spawnTile {
+    order: 0;
+    outline: 3px solid $green-5;
+  }
+  #nextPath {
+    order: 2;
+    outline: 3px solid $green-5;
+  }
+}
+
+#board {
+  display: grid;
+  margin: 1rem auto;
+  outline: 3px solid $green-5;
+}
+
+// TILES
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  // path tiles
+  &[data-path] {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  @include getBackground('0000');
+  @include getBackground('0010');
+  @include getBackground('0011');
+  @include getBackground('0101');
+  @include getBackground('1001');
+  @include getBackground('0110');
+  @include getBackground('1010');
+  @include getBackground('1100');
+
+  // cursor tile
+  &.cursor {
+    outline: 3px solid $neutral-5;
+    z-index: 4;
+  }
+
+  // character tile
+  &.character {
+    transition: all 0.25s linear;
+    &::before {
+      z-index: 1;
+      background-image: url('./img/character.svg');
+    }
+    @include rotateCharacter(top, 180);
+    @include rotateCharacter(right, -90);
+    @include rotateCharacter(bottom, 0);
+    @include rotateCharacter(left, 90);
+  }
+
+  // bomb tiles
+  &.bomb::after {
+    z-index: 2;
+    background-image: url('./img/bomb.svg');
+  }
+
+  // coin tiles
+  &.coin::before {
+    z-index: 3;
+    background-image: url('./img/coin.svg');
+  }
+
+  // blocked tiles
+  &.blocked {
+    background-image: url('./img/block.svg');
+  }
+}
