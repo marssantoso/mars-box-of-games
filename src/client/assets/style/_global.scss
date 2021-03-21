@@ -107,6 +107,8 @@
   }
   &__content {
     text-align: left;
+    width: 100%;
+    overflow-x: scroll;
   }
 }
 
@@ -134,6 +136,6 @@
 }
 
 .link {
-  color: $blue-3;
+  color: $blue-5;
   text-decoration: none;
 }
