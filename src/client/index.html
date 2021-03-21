@@ -14,18 +14,20 @@
   <body>
     <main class="container">
       <!-- header logo -->
-      <header class="logo">
-        <img src="./assets/img/logo.svg" width="64" height="64" alt="Logo" class="logo__image" />
-        <div class="logo__wordmark">
-          <h1 class="logo__title">MARS&apos;</h1>
-          <h2 class="logo__subtitle">Box of Games</h2>
-        </div>
+      <header class="header">
+        <a href="/" class="logo">
+          <img src="./assets/img/logo.svg" width="64" height="64" alt="Logo" class="logo__image" />
+          <div class="logo__wordmark">
+            <h1 class="logo__title">MARS&apos;</h1>
+            <h2 class="logo__subtitle">Box of Games</h2>
+          </div>
+        </a>
       </header>
       <!-- game selections -->
       <section class="section">
         <ul class="selection">
           <li class="selection__item">
-            <a href="#" class="selection__card">
+            <a href="/games/coin-hunt" class="selection__card">
               <span class="selection__title">Coin Hunt</span>
             </a>
           </li>
@@ -40,7 +42,7 @@
     <!-- footer -->
     <footer class="footer">
       <p class="footer__text">
-        Mars Santoso &lt;<a href="mailto:marssantoso@hotmail.com">marssantoso@hotmail.com</a>&gt;
+        Mars Santoso &lt;<a href="mailto:marssantoso@hotmail.com" class="link">marssantoso@hotmail.com</a>&gt;
       </p>
     </footer>
     <script src="./index.ts"></script>

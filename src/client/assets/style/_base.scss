@@ -9,3 +9,56 @@ body {
   padding-bottom: 40px;
   font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 1rem;
+  margin: unset;
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+h1,
+.h1 {
+  font-size: 2rem;
+}
+
+h2,
+.h2 {
+  font-size: 1.75rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.5rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.25rem;
+}
+
+h5,
+.h5 {
+  font-size: 1.15rem;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+}
+
+hr {
+  border: 1px solid $neutral-3;
+}
+
+ul {
+  padding-left: 1.25rem;
+  li {
+    line-height: 150%;
+  }
+}

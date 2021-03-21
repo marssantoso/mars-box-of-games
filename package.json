@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build:server": "tsc",
-    "build:client": "parcel build src/client/** --no-source-maps --out-dir public",
+    "build:client": "parcel build src/client/**/*.html --no-source-maps --out-dir public",
     "prestart": "npm run build:server && npm run build:client",
     "start": "NODE_ENV=production node .",
     "dev": "ts-node-dev src/index.ts",

@@ -20,7 +20,6 @@ export default class {
         watch: true,
         sourceMaps: true,
         outDir: 'public',
-        publicUrl: '.',
       });
       this.app.use(bundler.middleware());
     }
