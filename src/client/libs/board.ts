@@ -1,5 +1,5 @@
 import Tile from './tile';
-import { Coord } from '../types';
+import { Callback, Coord } from '../types';
 import { create2dArray } from '../utils';
 
 export default class Board {
@@ -25,6 +25,17 @@ export default class Board {
   protected render(): void {
     this.tiles = create2dArray(this.rows, this.cols).map((row) => {
       return row.map(({ x, y }: Coord) => new Tile(this.el, x, y));
+    });
+  }
+
+  protected emit(event: string, detail: unknown): void {
+    this.el.dispatchEvent(new CustomEvent(event, { detail }));
+  }
+
+  public on(event: string, handler: Callback): void {
+    return this.el.addEventListener(event, (e) => {
+      if (!('detail' in e)) return;
+      handler((e));
     });
   }
 

@@ -1,0 +1,72 @@
+@import '../../assets/style/variables';
+
+// LOCAL MIXINS
+
+@mixin mines($no, $color) {
+  &[data-mines='#{$no}'] {
+    color: $color;
+  }
+}
+
+// GLOBAL OVERRIDES
+
+.section__description {
+  max-width: 900px;
+  > * {
+    flex: 1;
+    &:not(:first-child) {
+      text-align: center;
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+
+// MAIN ELEMENTS
+
+#board {
+  display: grid;
+  margin: 0 auto;
+  gap: 4px;
+  background-color: $green-4;
+  border: 4px solid $green-4;
+  border-radius: 0.5rem;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  z-index: 0;
+  background-image: url('./img/tile.svg');
+  color: $neutral-1;
+  background-size: contain;
+  &.flag {
+    background-image: url('./img/flag.svg');
+  }
+  &.mine {
+    background-image: url('./img/mine.svg');
+  }
+  &.flag.mine {
+    background-image: url('./img/exploded.svg');
+  }
+  &.revealed {
+    background-image: url('./img/revealed.svg');
+    font-size: 2.5rem;
+    color: $blue-3;
+    font-weight: 900;
+  }
+  @include mines(1, #5f90a0);
+  @include mines(2, #6bac8f);
+  @include mines(3, #e76a8e);
+  @include mines(4, #1d6f8a);
+  @include mines(5, #e52156);
+  @include mines(6, #4cb0aa);
+  @include mines(7, #826b98);
+  @include mines(8, #605845);
+}

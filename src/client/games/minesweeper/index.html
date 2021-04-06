@@ -8,40 +8,38 @@
     <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/style/main.scss" />
-    <title>Mars' Box of Games</title>
+    <link rel="stylesheet" href="../../assets/style/main.scss" />
+    <link rel="stylesheet" href="./minesweeper.scss" />
+    <title>Minesweeper - Mars' Box of Games</title>
   </head>
   <body>
     <main class="container">
       <!-- header logo -->
       <header class="header">
         <a href="/" class="logo">
-          <img src="./assets/img/logo.svg" width="64" height="64" alt="Logo" class="logo__image" />
+          <img src="../../assets/img/logo.svg" width="64" height="64" alt="Logo" class="logo__image" />
           <div class="logo__wordmark">
             <h1 class="logo__title">MARS&apos;</h1>
             <h2 class="logo__subtitle">Box of Games</h2>
           </div>
         </a>
       </header>
-      <!-- game selections -->
+      <!-- section -->
       <section class="section">
-        <ul class="selection">
-          <li class="selection__item">
-            <a href="/games/coin-hunt" class="selection__card">
-              <span class="selection__title">Coin Hunt</span>
-            </a>
-          </li>
-          <li class="selection__item">
-            <a href="/games/minesweeper" class="selection__card">
-              <span class="selection__title">Minesweeper</span>
-            </a>
-          </li>
-          <li class="selection__item">
-            <div class="selection__card selection__card--disabled">
-              <span class="selection__title">More<br />Coming Soon</span>
-            </div>
-          </li>
-        </ul>
+        <div class="section__title">
+          <h1>Minesweeper</h1>
+        </div>
+        <div class="section__description">
+          <div id="mines"></div>
+          <div class="menu">
+            <a href="/games/minesweeper" class="link">New Game</a>
+            <a href="/games/minesweeper/help.html" class="link">Help</a>
+          </div>
+          <div id="time"></div>
+        </div>
+        <div class="section__content">
+          <div id="board"></div>
+        </div>
       </section>
     </main>
     <!-- footer -->

@@ -75,6 +75,18 @@ export class Tile extends DefaultTile {
     this.el.classList.remove('coin');
   }
 
+  public enter(player: Character): void {
+    this.player = player;
+  }
+
+  public leave(): void {
+    this.player = null;
+  }
+
+  get isOccupied(): boolean {
+    return this.player !== null;
+  }
+
   get isPaved(): boolean {
     return Object.values(this.path).includes(true);
   }

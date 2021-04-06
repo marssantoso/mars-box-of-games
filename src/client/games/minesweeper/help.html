@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Collections of browser game written using TypeScript and CSS Grid layouts" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/style/main.scss" />
+    <title>Minesweeper Help - Mars' Box of Games</title>
+  </head>
+  <body>
+    <main class="container">
+      <!-- header logo -->
+      <header class="header">
+        <a href="/" class="logo">
+          <img src="../../assets/img/logo.svg" width="64" height="64" alt="Logo" class="logo__image" />
+          <div class="logo__wordmark">
+            <h1 class="logo__title">MARS&apos;</h1>
+            <h2 class="logo__subtitle">Box of Games</h2>
+          </div>
+        </a>
+      </header>
+      <!-- section -->
+      <section class="section">
+        <div class="section__title">
+          <h1>Minesweeper</h1>
+        </div>
+        <div class="section__content">
+          <h2>Description</h2>
+          <p>Sweep all the mines within the board.</p>
+          <hr />
+          <h2>Rules</h2>
+          <ul>
+            <li>Reveal the tiles reveal whether its a number or a mine.</li>
+            <li>You can open the first tile at random and there will never be a mine.</li>
+            <li>The number is the total mines adjacent to the tile.</li>
+            <li>Place a flag when you're sure there's a mine in it, otherwise it's safe to open it..</li>
+            <li>Mark all the mines with flags and reveal all the remaining tiles to win the game.</li>
+          </ul>
+          <hr />
+          <h2>Controls</h2>
+          <ul>
+            <li><strong>Left Click:</strong> Reveal tile</li>
+            <li><strong>Right Click:</strong> Toggle flag</li>
+            <li><strong>Double Click:</strong> Reveal surrounding tiles</li>
+          </ul>
+          <hr />
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <p class="footer__text">
+        Mars Santoso &lt;<a href="mailto:marssantoso@hotmail.com" class="link">marssantoso@hotmail.com</a>&gt;
+      </p>
+    </footer>
+  </body>
+</html>
