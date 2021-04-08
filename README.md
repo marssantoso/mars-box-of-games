@@ -36,9 +36,8 @@ npm run start
 
 ## Games
 
-```js
-// coming soon
-```
+* Coin Hunt
+* Minesweeper
 
 ## Future Plans
 
@@ -59,3 +58,7 @@ Since this is a personal project, I generally don't accept PRs, but if you find 
 ## History
 
 `2021-03-16` - Initial project kick off and setting up architecture.
+
+`2021-03-21` - Add the first game – Coin Hunt
+
+`2021-04-06` - Add a second game – Minesweeper
